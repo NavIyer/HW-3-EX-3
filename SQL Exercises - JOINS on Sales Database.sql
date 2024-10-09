@@ -112,6 +112,7 @@ SELECT s.name,
   INNER JOIN customer c
     ON s.city = c.city;
 
+This query will return the name of the salesman, the name of the customer, and the city of the customer, where the city of the salesman is equal to the city of the customer.
 
 
 /* 2. Explain in plain English in one sentence what is the output of the folloiwng block of SQL commands: */
@@ -124,4 +125,6 @@ SELECT c.cust_name AS "Customer Name",
   INNER JOIN salesman s
     ON c.salesman_id = s.salesman_id
   WHERE s.commission > 0.12;
+
+This query will return the name of the customer, the city of the customer, the name of the salesman, and the commission of the salesman, where the commission of the salesman is greater than 0.12 and the salesman_id of the customer is equal to the salesman_id of the salesman.
 

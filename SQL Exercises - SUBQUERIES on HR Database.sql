@@ -251,28 +251,29 @@ Table: jobs
 
 /* 1. Write a query to display the name (first name and last name) for those employees who gets more salary than the employee whose ID is 163. */
 
-SELECT ...,
-       ...
-  FROM ...
+SELECT first_name,
+       last_name
+  FROM employees
   WHERE salary > (SELECT salary
-                    FROM ...
-                    WHERE ... = 163);
-
-
-
+                    FROM employees
+                    WHERE employee_id = 163);
 
 
 
 /* 2. Write a query to display the employee id, employee name (first name and last name) for all employees who earn more than the average salary. */
 
-SELECT ...,
-       ...,
-       ...
-  FROM ...
-  WHERE ... > (SELECT AVG(...)
-                    FROM ...);
+SELECT employee_id,
+       first_name,
+       last_name
+  FROM employees
+  WHERE salary > (SELECT AVG(salary)
+                    FROM employees);
 
 
 
 /* 3. Write a query to display all the information of an employee whose salary and reporting person id is 3000 and 121, respectively. */
 
+SELECT *
+  FROM employees
+  WHERE salary = 3000
+    AND manager_id = 121;

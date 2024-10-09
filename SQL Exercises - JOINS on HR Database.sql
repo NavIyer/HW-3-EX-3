@@ -263,32 +263,29 @@ Table: job_grade
 
 /* 1. Write a query in SQL to display the first name, last name, department number, and department name for each employee. */
 
-SELECT ...,
-       ...,
-       ...,
-       ...
-  FROM ... ...
-  INNER JOIN ... ...
-    ON ...;
+SELECT employees.first_name,
+       employees.last_name,
+       departments.department_id,
+       departments.department_name
+  FROM employees
+  INNER JOIN departments
+    ON employees.department_id = departments.department_id;
 
 
 /* 2. Write a query in SQL to display the first and last name, department, city, and state province for each employee. */
 
 SELECT 
-        
-  FROM 
-  INNER JOIN 
-    ON 
-  INNER JOIN 
-    ON 
+    employees.first_name, employees.last_name, departments.department_name, locations.city, locations.state_province
+  FROM employees
+  INNER JOIN departments
+    ON employees.department_id = departments.department_id
+  INNER JOIN locations
+    ON departments.location_id = locations.location_id;
 
 
 
 /* 3. Write a query in SQL to display all departments including those where does not have any employee. */
 
-SELECT 
-  FROM 
-  LEFT JOIN 
-    ON 
+SELECT DEPARTMENT_NAME FROM departments
 
 
