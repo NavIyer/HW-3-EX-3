@@ -286,6 +286,6 @@ SELECT
 
 /* 3. Write a query in SQL to display all departments including those where does not have any employee. */
 
-SELECT DEPARTMENT_NAME FROM departments
+SELECT DEPARTMENT_NAME FROM departments;
 
 
